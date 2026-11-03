@@ -37,7 +37,6 @@ Das Starter-Repository enthält ungefähr:
 mobility-stats-ci-starter/
 ├── .gitignore
 ├── README.md
-├── PRAKTIKUM.md
 ├── pyproject.toml
 ├── data/
 │   └── rides.csv
@@ -97,7 +96,7 @@ Ctrl+Shift+P / Cmd+Shift+P
 
 Kontrolliert unten links in VS Code den aktuellen Branch.
 
-Für dieses Praktikum arbeitet ihr nicht direkt auf `main`.
+Für dieses Praktikum arbeitet ihr **nicht direkt auf `main`**.
 
 Erstellt über den Branchnamen unten links bzw. über die Command Palette:
 
@@ -633,50 +632,7 @@ Weil sie eine zusätzliche Behauptung unseres Projektes überprüft:
 
 ## 16. Finalen Workflow lesen
 
-Euer finaler Workflow sollte ungefähr diese Struktur besitzen:
-
-```yaml
-name: Python CI
-
-on:
-  push:
-  pull_request:
-
-permissions:
-  contents: read
-
-jobs:
-  quality:
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.12", "3.13"]
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v7
-
-      - name: Install uv and Python
-        uses: astral-sh/setup-uv@v10.0.0
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Sync project
-        run: uv sync --locked
-
-      - name: Run Ruff linter
-        run: uv run --locked ruff check .
-
-      - name: Check formatting
-        run: uv run --locked ruff format --check .
-
-      - name: Run tests
-        run: uv run --locked pytest -q
-```
-
-Nicht blind kopieren: Vergleicht diesen Stand mit eurer eigenen Datei und versucht jede größere Zeile erklären zu können.
+Euer finaler Workflow sollte nun für Python 3.12 und 3.13 mit Hilfe von ruff den Code überprüfen und die Tests laufen lassen.
 
 ---
 
@@ -794,7 +750,7 @@ und versucht, Quality und Kompatibilität in zwei Jobs aufzuteilen.
 
 ```text
 Lokal darf ein Tool reparieren.
-CI soll den committed Zustand prüfen.
+CI soll den committed Zustand aber nur prüfen.
 ```
 
 Und:
