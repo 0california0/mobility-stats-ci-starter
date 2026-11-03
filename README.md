@@ -628,15 +628,9 @@ Weil sie eine zusätzliche Behauptung unseres Projektes überprüft:
 
 ---
 
-# Phase 6 – Abschluss und Merge
+# Phase 6 – Abschluss 1 und Merge
 
-## 16. Finalen Workflow lesen
-
-Euer finaler Workflow sollte nun für Python 3.12 und 3.13 mit Hilfe von ruff den Code überprüfen und die Tests laufen lassen.
-
----
-
-## 17. Pull Request mergen
+## 16. Pull Request mergen
 
 Erst wenn beide Matrix-Jobs grün sind:
 
@@ -659,6 +653,22 @@ git pull
 ```
 
 ---
+# Phase 7 – Abschluss 2 und Merge
+
+## 17. Weitere Anpassung: Strikter werden!
+
+Einen "Linter" oder "Formatter" wie hier `ruff` können wir sehr detailiert anpassen, je nach unseren Vorstellungen und Anforderungen an das jeweilige Projekt.
+
+Hier bitte einmal beispielhaft eine Auswahl an weiteren Regeln hinzufügen indem `"E"` bei euch lokal zur `extent-select` Liste in der `pyproject.toml` Datei hinzugefügt wird. Das steht dort unter der Kategorie `[tool.ruff.lint]`.
+
+Danach bitte lokal noch einmal `uv run ruff check .` ausführen und schauen was passiert. Gibt es neue Hinweise/Beschwerden? Und wenn ja, machen die für euch Sinn? Diskutiert die Hinweise und sorg dann dafür dass ruff wieder "zufrieden" ist. Committed danach eure Änderungen.
+
+## 18. Pull Request mergen
+
+Sobald ruff nun wieder ohne Fehler läuft, die Änderungen zum remote pushen. Einen weiteren Pull Request erstellen und so lange weitere Anpassungen vornehmen, bis alle Tests grün sind. Danach in den `main`-Branch mergen. Done.
+
+---
+
 
 # Definition of Done
 
@@ -677,6 +687,7 @@ Das Praktikum ist abgeschlossen, wenn:
 - [ ] `uv run ruff format --check .` lokal grün ist,
 - [ ] pytest Teil der CI ist,
 - [ ] die CI auf Python 3.12 und 3.13 läuft,
+- [ ] "E" zu den ruff-Settings in der pyproject.toml hinzugefügt ist,
 - [ ] alle Matrix-Jobs grün sind,
 - [ ] der Pull Request erst danach gemerged wurde.
 
