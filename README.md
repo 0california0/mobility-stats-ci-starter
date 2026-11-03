@@ -756,18 +756,3 @@ needs:
 und versucht, Quality und Kompatibilität in zwei Jobs aufzuteilen.
 
 ---
-
-# Merksatz
-
-```text
-Lokal darf ein Tool reparieren.
-CI soll den committed Zustand aber nur prüfen.
-```
-
-Und:
-
-```text
-pytest → Verhalten
-Ruff   → automatisierbare Qualitätsregeln
-CI     → führt diese Checks reproduzierbar für Änderungen aus
-```
