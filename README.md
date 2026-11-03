@@ -237,7 +237,7 @@ Ihr solltet mindestens sehen:
 
 ```text
 .github/workflows/ci.yml
-uv.lock        # falls neu erzeugt
+uv.lock
 ```
 
 Workflow:
