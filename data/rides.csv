@@ -1,0 +1,9 @@
+ride_id,start_station,end_station,duration_min,rider_type
+R001,Central Station,River Park,12.0,member
+R002,Central Station,University,18.5,casual
+R003,Market Square,Central Station,31.0,member
+R004,Central Station,Museum,8.0,member
+R005,University,Market Square,42.5,casual
+R006,Market Square,River Park,27.0,member
+R007,Central Station,Market Square,35.0,casual
+R008,University,Central Station,14.0,member
