@@ -9,10 +9,10 @@ permissions:
 
 jobs:
   quality:
-      strategy:
-        fail-fast: false
-        matrix:
-          python-verson: ["3.12", "3.13"]
+    strategy:
+      fail-fast: false
+      matrix:
+        python-verson: ["3.12", "3.13"]
 
     runs-on: ubuntu-latest
 
