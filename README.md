@@ -1,7 +1,9 @@
 # Praktikum: Von lokalem Qualitätscheck zu Continuous Integration
 
 **Werkzeuge:** VS Code, Git/GitHub, `uv`, Ruff, pytest, GitHub Actions  
-**Arbeitsform:** einzeln oder zu zweit; jede Abgabe arbeitet in einem eigenen Fork
+**Arbeitsform:** einzeln oder zu zweit. Auch wenn zu zweit: jede Abgabe arbeitet in einem eigenen Fork (jede/r soll einmal bei sich eine CI erstellt haben und ausgeführt bekommen).
+
+**Hilfe für yaml-Dateien**: Oft scheitert das Ausführen von GitHub Actions an kleinen Fehlern in der yaml-Datei. In solchen Fällen helfen kleine Tools die yaml-Dateien überprüfen, wie z.B. https://yamlchecker.com/yaml-formatter oder www.yamllint.com.
 
 ---
 
